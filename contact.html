@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOCYZZ</title>
+    <link rel="stylesheet" href="style4.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="pp.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lilita+One&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><img src="locyzz.png" id="locyzz" /></li>
+                <li><a href="index.html">Mes réseaux</a></li>
+                <li><a href="reseaux.html">Liens Supercell</a></li>
+                <li><a href="graphiste.html" >Graphiste</a></li>
+                <li><a href="contact.html" class="active">Me contacter</a></li>
+                <li>
+                    <label class="switch">
+                        <input type="checkbox" onchange="toggleMode()" id="theme-switch">
+                        <span class="slider"></span>
+                    </label>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h2>Pour me contacter, deux moyens efficaces s'offrent à vous :</h2>
+    <nav>
+        <ul>
+            <li><a href="https://discord.com/invite/ZnHgH266er" class="active2"><i class="fab fa-discord"></i> Mon Discord</a></li>
+            <li><a href="reseaux.html" class="active3"><i class="fab fa-instagram"></i> Mon Instagram</a></li>
+        </ul>
+    </nav>
+    
+    <h2>Je suis à votre disposition pour répondre à toutes vos questions !</h2>
+
+    <script>
+        function toggleMode() {
+            const themeSwitch = document.getElementById('theme-switch');
+            document.body.classList.toggle('dark-mode', themeSwitch.checked);
+        }
+    </script>
+</body>
+</html>

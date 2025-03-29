@@ -1,0 +1,234 @@
+body {
+    font-family: "Lilita One", serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Espace entre les images */
+}
+
+/* Style pour le sous-titre "Miniature" */
+h2 {
+    color: #777; /* Couleur grisée */
+    font-size: 20px; /* Taille du texte */
+    margin-top: 10px; /* Espace au-dessus du texte */
+    margin-bottom: 0px; /* Réduit l'espace en dessous du texte */
+    font-weight: normal; /* Enlève le gras */
+}
+
+#minia {
+    height: 108px;
+    width: 192px;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 0px; /* Ajoute une marge pour éviter les collisions */
+    margin-bottom: 0px;
+}
+
+p {
+    font-size: 25px;
+    margin: 0;
+    text-decoration: underline;
+}
+
+header {
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+nav li {
+    padding: 5px 10px; /* Ajoute un peu plus d'espace autour du texte */
+}
+
+/* Style du dark mode */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .card {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode nav a {
+    color: white;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    width: 20px; /* Ajuste selon la taille de ton image */
+    height: 20px;
+    background-image: url('dark.png'); /* Image du mode sombre */
+    background-size: cover;
+    left: 5px;
+    top: 5px;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #e3e645;
+}
+
+input:checked + .slider:before {
+    background-image: url('light.png'); /* Image du mode clair */
+    left: calc(100% - 25px); /* Ajuste pour bien positionner */
+}
+
+/* Ajoute une transition fluide au changement de mode */
+body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.dark-mode .card,
+.card {
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.dark-mode nav a,
+nav a {
+    transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+/* Centrage et modification du titre LOCYZZ */
+header nav ul {
+    display: flex;
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+    gap: 15px;
+}
+
+header nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+#locyzz {
+    width: 150px; /* Ajuste la taille si nécessaire */
+    display: block;
+    margin: 0 auto;
+    height: auto;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Permet de gérer le retour à la ligne */
+}
+
+header nav ul li:first-child {
+    flex-basis: 100%; /* Fait en sorte que l'image prenne toute la largeur */
+    text-align: center; /* Centre l'image */
+}
+
+/* Paramètres des cadres */
+.card {
+    padding: 0; /* Supprime l'espace intérieur */
+    overflow: hidden; /* Évite les débordements */
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adapte l'image pour couvrir toute la zone */
+    border-radius: 10px; /* Garde les bords arrondis */
+}
+
+/* Effet pour page active */
+nav a.active {
+    background-color: #f9a724; /* Couleur de fond pour la page active */
+    color: white; /* Couleur du texte */
+    padding: 5px 15px; /* Espacement intérieur */
+    border-radius: 10px; /* Bords arrondis */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a.active:hover {
+    background-color: #d86f13; /* Légère variation au survol */
+}
+
+/* Style pour les logos */
+.logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.logo {
+    width: 150px; /* Ajustez la taille selon vos besoins */
+    height: 150px;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+/* Style pour les bannières YouTube */
+.banner-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.banner {
+    width: 300px; /* Ajustez la taille selon vos besoins */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
