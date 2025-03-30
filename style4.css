@@ -16,7 +16,7 @@ body {
 /* Style pour le sous-titre "Miniature" */
 h2 {
     color: #000000; /* Couleur grisée */
-    font-size: 30px; /* Taille du texte */
+    font-size: 25px; /* Taille du texte */
     margin-top: 10px; /* Espace au-dessus du texte */
     margin-bottom: 0px; /* Réduit l'espace en dessous du texte */
     font-weight: normal; /* Enlève le gras */
@@ -195,15 +195,23 @@ header nav ul li:first-child {
 
 /* Effet pour page active */
 nav a.active {
-    background-color: #f9a724; /* Couleur de fond pour la page active */
-    color: white; /* Couleur du texte */
-    padding: 5px 15px; /* Espacement intérieur */
-    border-radius: 10px; /* Bords arrondis */
-    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline;
+    background-image: linear-gradient(#f9a724, #f9a724);
+    background-size: 100% 8px; /* Épaisseur du soulignement */
+    background-position: 0 100%; /* Position sous le texte */
+    background-repeat: no-repeat;
+    border-radius: 5px; /* Arrondi des bords */
+    padding-bottom: 10px; /* Ajustement pour l'espacement */
 }
 
 nav a.active:hover {
-    background-color: #d86f13; /* Légère variation au survol */
+    display: inline;
+    background-image: linear-gradient(#d86f13, #d86f13);
+    background-size: 100% 8px; /* Épaisseur du soulignement */
+    background-position: 0 100%; /* Position sous le texte */
+    background-repeat: no-repeat;
+    border-radius: 5px; /* Arrondi des bords */
+    padding-bottom: 10px; /* Ajustement pour l'espacement */
 }
 
 /* Style pour les logos */
@@ -238,40 +246,62 @@ nav a.active:hover {
     object-fit: cover;
 }
 
-/* Style pour le bouton Discord (class="active2") */
-nav a.active2 {
-    background-color: #5865F2;
-    color: white;
-    padding: 15px 25px;  /* Augmenter l'espace intérieur du bouton */
-    border-radius: 15px;  /* Augmenter les bords arrondis */
-    font-size: 22px;  /* Augmenter la taille du texte */
-    transition: background-color 0.3s ease;
+
+
+
+
+
+/* Conteneur des boutons */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-nav a.active2:hover {
+/* Style général des boutons */
+.buttons-container button {
+    font-family: "Lilita One", serif;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    padding: 15px 25px;
+    border-radius: 15px;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Style du bouton Discord */
+.buttons-container .active2 {
+    background-color: #5865F2;
+    color: white;
+}
+
+.buttons-container .active2:hover {
     background-color: #4752C4;
 }
 
-/* Style pour le bouton Instagram (class="active3") */
-nav a.active3 {
+/* Style du bouton Instagram */
+.buttons-container .active3 {
     background: linear-gradient(45deg, #E4405F, #FCAF45);
     color: white;
-    padding: 15px 25px;  /* Augmenter l'espace intérieur du bouton */
-    border-radius: 15px;  /* Augmenter les bords arrondis */
-    font-size: 22px;  /* Augmenter la taille du texte */
-    transition: opacity 0.3s ease;
 }
 
-nav a.active3:hover {
+.buttons-container .active3:hover {
     opacity: 0.8;
 }
 
-/* Style pour les icônes dans les boutons */
-nav a i {
-    margin-right: 10px; /* Espace entre l'icône et le texte */
-    font-size: 30px;  /* Augmenter la taille des icônes */
-}
+/* Mode responsive : les boutons passent en colonne uniquement sur petit écran */
+@media screen and (max-width: 600px) {
+    .buttons-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
-nav a.active2 i, nav a.active3 i {
-    font-size: 30px;  /* Ajuster la taille des icônes dans les boutons */
+    .buttons-container button {
+        width: 80%; /* Ajuste la largeur pour bien s’adapter */
+    }
 }

@@ -190,15 +190,23 @@ header nav ul li:first-child {
 
 /* Effet pour page active */
 nav a.active {
-    background-color: #f9a724; /* Couleur de fond pour la page active */
-    color: white; /* Couleur du texte */
-    padding: 5px 15px; /* Espacement intérieur */
-    border-radius: 10px; /* Bords arrondis */
-    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline;
+    background-image: linear-gradient(#f9a724, #f9a724);
+    background-size: 100% 8px; /* Épaisseur du soulignement */
+    background-position: 0 100%; /* Position sous le texte */
+    background-repeat: no-repeat;
+    border-radius: 5px; /* Arrondi des bords */
+    padding-bottom: 10px; /* Ajustement pour l'espacement */
 }
 
 nav a.active:hover {
-    background-color: #d86f13; /* Légère variation au survol */
+    display: inline;
+    background-image: linear-gradient(#d86f13, #d86f13);
+    background-size: 100% 8px; /* Épaisseur du soulignement */
+    background-position: 0 100%; /* Position sous le texte */
+    background-repeat: no-repeat;
+    border-radius: 5px; /* Arrondi des bords */
+    padding-bottom: 10px; /* Ajustement pour l'espacement */
 }
 
 /* Style pour les logos */
