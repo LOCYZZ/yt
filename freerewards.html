@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOCYZZ</title>
-    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="style2.css">
     <link rel="icon" type="image/png" sizes="16x16" href="pp.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lilita+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Lilita+One&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
             <ul>
                 <li><img src="locyzz.png" id="locyzz" /></li>
-                <li><a href="index.html">Mes réseaux</a></li>
+                <li><a href="index.html" >Mes réseaux</a></li>
                 <li><a href="freerewards.html" class="active">Liens Supercell</a></li>
                 <li><a href="graphiste.html">Graphiste</a></li>
                 <li><a href="contact.html">Me contacter</a></li>
@@ -28,19 +28,33 @@
             </ul>
         </nav>
     </header>
-    <p>Récompenses Gratuites :</p>
-    <div class="logo-container">
-        <a href="https://link.squadbusters.com/voucher/bdde4ac3-97c8-419b-a0db-919b0de6f452" target="_blank"><img src="free/sq/24.png" class="logo"></a>
-        <a href="https://link.squadbusters.com/fr/voucher/e8a6f727-6226-4238-a5ac-424e456d19a9/" target="_blank"><img src="free/sq/25.png" class="logo"></a>
-    </div>
-    <br>
-
-    <nav>
-        <ul>
-            <li><a href="freerewards.html" class="active">Retour page principal</a></li>
-        </ul>
-    </nav>
-
+    <main class="grid-container">
+        <section class="card bs">
+            <a href="bs.html">
+            <img src="bs.png" alt="bs">
+        </a>
+        </section>
+        <section class="card cr">
+            <a href="cr.html">
+            <img src="cr.png" alt="cr">
+        </a>
+        </section>
+        <section class="card sq">
+            <a href="sq.html">
+            <img src="sq.png" alt="sq">
+        </a>
+        </section>
+        <section class="card coc">
+            <a href="clc.html">
+            <img src="coc.png" alt="coc">
+        </a>
+        </section>
+        <section class="card hd">
+            <a href="hd.html">
+            <img src="hd.png" alt="hd">
+        </a>
+        </section>
+    </main>
     <script>
         function toggleMode() {
             const themeSwitch = document.getElementById('theme-switch');
