@@ -2,11 +2,12 @@ body {
     font-family: "Lilita One", serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: #212121;
+    color: white;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 header {
-    
     text-align: center;
 }
 
@@ -16,12 +17,18 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav li {
+    padding: 5px 10px;
 }
 
 nav a {
-    color: rgb(0, 0, 0);
+    color: white;
     text-decoration: none;
     font-size: 20px;
+    transition: color 0.5s ease;
 }
 
 .grid-container {
@@ -31,167 +38,66 @@ nav a {
     padding: 20px;
 }
 
-nav li {
-    padding: 5px 10px; /* Ajoute un peu plus d'espace autour du texte */
-}
-
-
-
-
-
-/* Style du dark mode */
-
-.dark-mode {
-    background-color: #121212;
-    color: white;
-}
-
-.dark-mode .card {
+.card {
     background-color: #1e1e1e;
     box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
-}
-
-.dark-mode nav a {
-    color: white;
-}
-
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 30px;
-}
-
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: 0.4s;
-    border-radius: 50px;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    width: 20px; /* Ajuste selon la taille de ton image */
-    height: 20px;
-    background-image: url('dark.png'); /* Image du mode sombre */
-    background-size: cover;
-    left: 5px;
-    top: 5px;
-    transition: 0.4s;
-}
-
-input:checked + .slider {
-    background-color: #e3e645;
-}
-
-input:checked + .slider:before {
-    background-image: url('light.png'); /* Image du mode clair */
-    left: calc(100% - 25px); /* Ajuste pour bien positionner */
-}
-
-/* Ajoute une transition fluide au changement de mode */
-body {
-    transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-.dark-mode .card,
-.card {
     transition: background-color 0.5s ease, box-shadow 0.5s ease;
-}
-
-.dark-mode nav a,
-nav a {
-    transition: color 0.5s ease, background-color 0.5s ease;
-}
-
-
-/*Centrage et modification du titre LOCYZZ*/
-
-header nav ul {
-    display: flex;
-    align-items: center; /* Centre verticalement */
-    justify-content: center; /* Centre horizontalement */
-    gap: 15px;
-}
-
-header nav ul li {
-    display: flex;
-    align-items: center;
-}
-
-#locyzz {
-    width: 150px; /* Ajuste la taille si nécessaire */
-    display: block;
-    margin: 0 auto;
-    height: auto;
-}
-
-header nav ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap; /* Permet de gérer le retour à la ligne */
-}
-
-header nav ul li:first-child {
-    flex-basis: 100%; /* Fait en sorte que l'image prenne toute la largeur */
-    text-align: center; /* Centre l'image */
-}
-
-
-
-
-/*Parametre des cadre*/
-
-.card {
-    padding: 0; /* Supprime l'espace intérieur */
-    overflow: hidden; /* Évite les débordements */
+    padding: 0;
+    overflow: hidden;
 }
 
 .card img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Adapte l'image pour couvrir toute la zone */
-    border-radius: 10px; /* Garde les bords arrondis */
+    object-fit: cover;
+    border-radius: 10px;
 }
 
+/* Titre LOCYZZ centré */
+#locyzz {
+    width: 125px;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+}
 
+header nav ul li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
 
-
-
-
-/* Effet pour page active */
+/* Effet lien actif */
 nav a.active {
     display: inline;
-    background-image: linear-gradient(#f9a724, #f9a724);
-    background-size: 100% 8px; /* Épaisseur du soulignement */
-    background-position: 0 100%; /* Position sous le texte */
+    background-image: linear-gradient(#ffffff, #6c6c6c);
+    background-size: 100% 8px;
+    background-position: 0 100%;
     background-repeat: no-repeat;
-    border-radius: 5px; /* Arrondi des bords */
-    padding-bottom: 10px; /* Ajustement pour l'espacement */
+    border-radius: 5px;
+    padding-bottom: 10px;
 }
 
 nav a.active:hover {
-    display: inline;
-    background-image: linear-gradient(#d86f13, #d86f13);
-    background-size: 100% 8px; /* Épaisseur du soulignement */
-    background-position: 0 100%; /* Position sous le texte */
-    background-repeat: no-repeat;
-    border-radius: 5px; /* Arrondi des bords */
-    padding-bottom: 10px; /* Ajustement pour l'espacement */
+    background-image: linear-gradient(#6c6c6c, #ffffff);
 }
 
+.card.youtube {
+    box-shadow: 0 0 15px 3px red;
+    border-radius: 10px;
+}
+
+.card.discord {
+    box-shadow: 0 0 15px 3px #3b3ae9;    ;
+    border-radius: 10px;
+}
+
+.card.tiktok {
+    box-shadow: 0 0 15px 3px #1d1f24;
+    border-radius: 10px;
+}
+
+.card.instagram {
+    box-shadow: 0 0 15px 3px #903cd2;
+    border-radius: 10px;
+}
 
