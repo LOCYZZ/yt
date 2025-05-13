@@ -140,3 +140,19 @@ header nav ul li:first-child {
     border-radius: 10px;
     object-fit: cover;
 }
+
+/* Bannières discord */
+.bannerdiscord-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.bannerdiscord {
+    width: 333px;
+    height: 112px;
+    border-radius: 10px;
+    object-fit: cover;
+}
