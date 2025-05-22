@@ -1,0 +1,320 @@
+body {
+    font-family: "Lilita One", serif;
+    margin: 0;
+    padding: 0;
+    background-color: #212121; /* Mode sombre par défaut */
+    color: white; /* Texte clair */
+    text-align: center;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+h2 {
+    color: #ccc; /* Gris clair pour titres */
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-weight: normal;
+}
+
+#minia {
+    height: 108px;
+    width: 192px;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 0px;
+    margin-bottom: 0px;
+}
+
+p {
+    font-size: 25px;
+    margin: 0;
+    text-decoration: underline;
+}
+
+header {
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.5s ease;
+}
+
+nav li {
+    padding: 5px 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    padding: 0;
+    overflow: hidden;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+nav a.active {
+    display: inline;
+    background-image: linear-gradient(#ffffff, #6c6c6c);
+    background-size: 100% 8px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    padding-bottom: 10px;
+}
+
+nav a.active:hover {
+    background-image: linear-gradient(#6c6c6c, #ffffff);
+}
+
+#locyzz {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+}
+
+header nav ul li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+/* Logos */
+.logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+/* Bannières YouTube */
+.banner-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.banner {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Bannières discord */
+.bannerdiscord-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.bannerdiscord {
+    width: 333px;
+    height: 112px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #2e2e2e;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+
+.selector-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.selector-container label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.selector-container select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+
+
+
+
+
+
+
+/* Wrapper général */
+.scrolling-wrapper {
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+/* Conteneur ligne */
+.scrolling-row {
+    display: flex;
+    width: max-content;
+    flex-wrap: nowrap;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.scrolling-row.left {
+    animation: scroll-left 30s linear infinite;
+}
+
+.scrolling-row.right {
+    animation: scroll-right 30s linear infinite;
+    margin-top: 15px;
+}
+
+/* Bloc de duplication */
+.scrolling-content {
+    display: flex;
+    gap: 20px;
+}
+
+/* Logos */
+.logo-row img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Bannières */
+.banner-row img {
+    width: 300px;
+    height: 112px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Animations */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .logo-row img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .banner-row img {
+        width: 200px;
+        height: 75px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-row img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .banner-row img {
+        width: 160px;
+        height: 60px;
+    }
+}
+
+/* Ajoute un espace à droite sur la dernière image de chaque bloc scrolling-content */
+.scrolling-content img:last-child {
+    margin-right: 20px;
+}

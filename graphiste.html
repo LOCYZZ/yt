@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOCYZZ</title>
-    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="style5.css">
     <link rel="icon" type="image/png" sizes="16x16" href="pp.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lilita+One&display=swap" rel="stylesheet">
 </head>
+<script>
+    function redirectToCategory() {
+        const select = document.getElementById("category-selector");
+        const value = select.value;
+
+        if (value) {
+            window.location.href = value;
+        }
+    }
+</script>
+
 <body>
     <header>
         <nav>
@@ -22,43 +33,93 @@
             </ul>
         </nav>
     </header>
-    <p>Mes créations :</p>
+    <h1>🚧 Page en cours de refonte 🚧</h1>
+    <h2>Sélectionne le produit qui t'intéresse ou que tu souhaites découvrir :</h2>
+    <div class="selector-container">
+    <label for="category-selector">Choisir une catégorie :</label>
+    <select id="category-selector" onchange="redirectToCategory()">
+        <option value="">-- Sélectionner --</option>
+        <option value="#bannieres-discord">Bannières Discord</option>
+        <option value="#miniatures">Miniatures</option>
+        <option value="#logos">Logos</option>
+        <option value="#bannieres-ytb">Bannières YouTube</option>
+    </select>
+</div>
 
-    <h2>Bannières Discord</h2>
-    <div class="banner-container">
-        <a href="https://discord.gg/DJQk2yFBSR" target="_blank"><img src="graph/bannerdiscord/3.png" class="bannerdiscord"></a>
-        <a href="https://discord.gg/DJQk2yFBSR" target="_blank"><img src="graph/bannerdiscord/2.png" class="bannerdiscord"></a>
-        <a href="https://discord.gg/DJQk2yFBSR" target="_blank"><img src="graph/bannerdiscord/1.png" class="bannerdiscord"></a>
+<div class="scrolling-wrapper">
+    <!-- Logos -->
+    <div class="scrolling-row left logo-row">
+        <div class="scrolling-content">
+            <img src="logo1.png" alt="">
+            <img src="logo2.png" alt="">
+            <img src="logo3.png" alt="">
+            <img src="logo4.png" alt="">
+            <img src="logo5.png" alt="">
+            <img src="logo6.png" alt="">
+            <img src="logo1.png" alt="">
+            <img src="logo2.png" alt="">
+            <img src="logo3.png" alt="">
+        </div>
+        <!-- Clone -->
+        <div class="scrolling-content">
+            <img src="logo1.png" alt="">
+            <img src="logo2.png" alt="">
+            <img src="logo3.png" alt="">
+            <img src="logo4.png" alt="">
+            <img src="logo5.png" alt="">
+            <img src="logo6.png" alt="">
+            <img src="logo1.png" alt="">
+            <img src="logo2.png" alt="">
+            <img src="logo3.png" alt="">
+        </div>
     </div>
 
-    <h2>Miniature</h2>
-    <div class="image-container">
-        <a href="https://youtu.be/2r77rubOvDg?si=LEfQwOc_UOuC0yb3" target="_blank"><img src="minia1.png" id="minia"></a>
-        <a href="https://youtu.be/PLxVoZF5xrE?si=eGDuZtQZklLBH3Y4" target="_blank"><img src="minia2.png" id="minia"></a>
-        <a href="https://www.youtube.com/live/hJBqFHTRtvU?si=ypauOS2B8UuktpoN" target="_blank"><img src="minia3.png" id="minia"></a>
-        <a href="https://youtu.be/xICjFc8Idl4?si=ozgqgdyQd8BBYsIq" target="_blank"><img src="minia4.png" id="minia"></a>
-        <img src="minia5.png" id="minia">
-        <img src="minia6.png" id="minia">
+    <!-- Bannières -->
+    <div class="scrolling-row right banner-row">
+        <div class="scrolling-content">
+            <img src="graph/bannerdiscord/1.png" alt="">
+            <img src="graph/bannerdiscord/2.png" alt="">
+            <img src="graph/bannerdiscord/3.png" alt="">
+            <img src="graph/bannerdiscord/4.png" alt="">
+            <img src="graph/bannerdiscord/5.png" alt="">
+            <img src="graph/bannerdiscord/6.png" alt="">
+            <img src="graph/bannerdiscord/7.png" alt="">
+            <img src="graph/bannerdiscord/8.png" alt="">
+            <img src="graph/bannerdiscord/9.png" alt="">
+            <img src="graph/bannerdiscord/1.png" alt="">
+            <img src="graph/bannerdiscord/2.png" alt="">
+            <img src="graph/bannerdiscord/3.png" alt="">
+            <img src="graph/bannerdiscord/4.png" alt="">
+            <img src="graph/bannerdiscord/5.png" alt="">
+            <img src="graph/bannerdiscord/6.png" alt="">
+            <img src="graph/bannerdiscord/7.png" alt="">
+            <img src="graph/bannerdiscord/8.png" alt="">
+            <img src="graph/bannerdiscord/9.png" alt="">
+        </div>
+        <!-- Clone -->
+        <div class="scrolling-content">
+            <img src="graph/bannerdiscord/1.png" alt="">
+            <img src="graph/bannerdiscord/2.png" alt="">
+            <img src="graph/bannerdiscord/3.png" alt="">
+            <img src="graph/bannerdiscord/4.png" alt="">
+            <img src="graph/bannerdiscord/5.png" alt="">
+            <img src="graph/bannerdiscord/6.png" alt="">
+            <img src="graph/bannerdiscord/7.png" alt="">
+            <img src="graph/bannerdiscord/8.png" alt="">
+            <img src="graph/bannerdiscord/9.png" alt="">
+            <img src="graph/bannerdiscord/1.png" alt="">
+            <img src="graph/bannerdiscord/2.png" alt="">
+            <img src="graph/bannerdiscord/3.png" alt="">
+            <img src="graph/bannerdiscord/4.png" alt="">
+            <img src="graph/bannerdiscord/5.png" alt="">
+            <img src="graph/bannerdiscord/6.png" alt="">
+            <img src="graph/bannerdiscord/7.png" alt="">
+            <img src="graph/bannerdiscord/8.png" alt="">
+            <img src="graph/bannerdiscord/9.png" alt="">
+        </div>
     </div>
+</div>
 
-    <h2>Logos</h2>
-    <div class="logo-container">
-        <a href="https://youtube.com/@rayanerm_bs?si=yXcy7JkV0VZRK5R6" target="_blank"><img src="logo1.png" class="logo"></a>
-        <img src="logo2.png" class="logo">
-        <img src="logo3.png" class="logo">
-        <img src="logo4.png" class="logo">
-        <img src="logo5.png" class="logo">
-        <img src="logo6.png" class="logo">
-        <img src="logo7.png" class="logo">
-        <img src="logo8.png" class="logo">
-    </div>
-
-    <h2>Bannières YouTube</h2>
-    <div class="banner-container">
-        <a href="https://discord.gg/DJQk2yFBSR" target="_blank"><img src="graph/bannerytb/1.png" class="banner"></a>
-        <a href="https://discord.gg/DJQk2yFBSR" target="_blank"><img src="graph/bannerytb/2.png" class="banner"></a>
-        <a href="https://youtube.com/@rayanerm_bs?si=yXcy7JkV0VZRK5R6" target="_blank"><img src="banner1.png" class="banner"></a>
-    </div>
 
     <br>
 
@@ -74,5 +135,7 @@
             document.body.classList.toggle('dark-mode', themeSwitch.checked);
         }
     </script>
+
+    
 </body>
 </html>
