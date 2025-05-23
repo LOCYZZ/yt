@@ -318,3 +318,44 @@ header nav ul li:first-child {
 .scrolling-content img:last-child {
     margin-right: 20px;
 }
+
+/* Miniatures YouTube */
+.miniatures-row img {
+    width: 192px;
+    height: 108px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Bannières YouTube */
+.yt-banner-row img {
+    width: 500px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Responsive pour miniatures et bannières YT */
+@media (max-width: 768px) {
+    .miniatures-row img {
+        width: 144px;
+        height: 81px;
+    }
+
+    .yt-banner-row img {
+        width: 300px;
+        height: 108px;
+    }
+}
+
+@media (max-width: 480px) {
+    .miniatures-row img {
+        width: 120px;
+        height: 68px;
+    }
+
+    .yt-banner-row img {
+        width: 250px;
+        height: 90px;
+    }
+}
